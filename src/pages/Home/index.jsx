@@ -21,7 +21,7 @@ function Home() {
       <Grid>
           {filmes.map((filme) => (
             <MovieCard key={filmes.id} filme={filme}/>
-          ))};
+          ))}
       </Grid>
     </div>
   );

@@ -5,6 +5,7 @@ import SerieDetails from "./pages/SerieDetails";
 import Favorites from "./pages/Favorites";
 import Header from "./components/Header";
 import GlobalStyle from "./styles/GlobalStyles";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/filme/:id" element={<MovieDetails />} />
           <Route path="/serie/id:" element={<SerieDetails />} />
           <Route path="/favoritos" element={<Favorites />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
     </Router>
   );

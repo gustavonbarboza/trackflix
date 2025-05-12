@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Container } from "./styles";
@@ -6,11 +6,17 @@ import { Container } from "./styles";
 function Details() {
   const { id } = useParams();
   const [filme, setFilme] = useState(null);
+  const navigate = useNavigate();
   
   useEffect(() => {
     async function carregarDetalhes() {
-      const resposta = await api.get(`/movie/${id}`);
-      setFilme(resposta.data);
+      try {
+        const resposta = await api.get(`/movie/${id}`);
+        setFilme(resposta.data);
+      } catch (erro) {
+        console.error("Erro ao buscar filme: ", erro);
+        navigate("/notfound");
+      }
     }
 
     carregarDetalhes()
@@ -27,7 +33,7 @@ function Details() {
       />
       <p><strong>Sinopse:</strong> {filme.overview}</p>
       <p><strong>Nota:</strong> {filme.vote_average}</p>
-      <p><strong>Data de lançamento:</strong> {filme.realease_date}</p>
+      <p><strong>Data de lançamento:</strong> {filme.release_date}</p>
     </Container>
   ); 
 }
