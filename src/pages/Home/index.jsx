@@ -1,19 +1,7 @@
 import { useEffect, useState } from "react";
-import api from "../services/api";
-import MovieCard from "../components/MovieCard";
-import styled from "styled-components";
-
-const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-  margin-top: 20px;
-`;
+import api from "../../services/api";
+import MovieCard from "../../components/MovieCard";
+import { Title, Grid } from "./styles"
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
