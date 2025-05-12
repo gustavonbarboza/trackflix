@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Container } from "./styles";
 
-function Details() {
+function DetailsMovie() {
   const { id } = useParams();
   const [filme, setFilme] = useState(null);
   const navigate = useNavigate();
@@ -38,4 +38,4 @@ function Details() {
   ); 
 }
 
-export default Details;
+export default DetailsMovie;

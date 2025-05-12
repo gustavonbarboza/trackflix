@@ -14,8 +14,8 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/filme/:id" element={<MovieDetails />} />
-          <Route path="/serie/id:" element={<SerieDetails />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/tv/:id" element={<SerieDetails />} />
           <Route path="/favoritos" element={<Favorites />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
