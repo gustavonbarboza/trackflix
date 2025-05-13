@@ -7,7 +7,9 @@ function MovieCard({ filme, tipo = "movie" }) {
     <Link to={`/${tipo}/${filme.id}`} style={{ textDecoration: "none" }}>
       <Card>
         <Poster
-          src={`https://image.tmdb.org/t/p/w300${filme.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w300${
+            tipo === "person" ? filme.profile_path : filme.poster_path
+           }`}
           alt={filme.title || filme.name}
         />
         <Title>{filme.title || filme.name}</Title>

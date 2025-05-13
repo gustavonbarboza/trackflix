@@ -19,7 +19,7 @@ function Movies() {
       <Title>Filmes Populares</Title>
       <Grid>
           {filmes.map((filme) => (
-            <MovieCard key={filme.id} filme={filme}/>
+            <MovieCard key={filme.id} filme={filme} tipo="movie"/>
           ))}
       </Grid>
     </Container>
