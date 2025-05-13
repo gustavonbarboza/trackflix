@@ -20,7 +20,7 @@ function DetailsSerie() {
     }
 
     carregarDetalhes()
-  }, [id]);
+  }, [id, navigate]);
 
   if (!serie) return <p>Carregando...</p>;
   

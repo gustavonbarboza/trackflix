@@ -20,7 +20,7 @@ function DetailsMovie() {
     }
 
     carregarDetalhes()
-  }, [id]);
+  }, [id, navigate]);
 
   if (!filme) return <p>Carregando...</p>;
   

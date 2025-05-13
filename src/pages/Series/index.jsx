@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import api from "../../../services/api";
-import SerieCard from "../../../components/Card";
+import api from "../../services/api";
+import SerieCard from "../../components/Card";
 import { Container, Title, Grid } from "../Series/styles"
 
 function Series() {
