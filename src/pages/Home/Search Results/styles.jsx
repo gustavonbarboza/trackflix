@@ -16,6 +16,7 @@ export const Grid = styled.div `
 `;
 
 export const Card = styled.div`
+  margin-bottom: 40px;
   text-align: center;
 
   img {
@@ -26,5 +27,10 @@ export const Card = styled.div`
 
   h3 {
     font-size: 1rem;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 12px;
   }
 `;

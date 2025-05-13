@@ -21,6 +21,17 @@ function Search() {
     buscar();
   }, [query]);
 
+  function formatarData(dataString) {
+    if (!dataString) return "Sem data";
+    
+    const data = new Date(dataString);
+    return data.toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  }
+
   return (
     <Container>
       <Title>Resultados para: "{query}"</Title>
@@ -43,7 +54,14 @@ function Search() {
                 ? "Série"
                 : item.media_type === "person"
                 ? "Pessoa"
-              : "" }
+                : "" 
+              } - {
+                    item.media_type === "movie" 
+                    ? formatarData(item.release_date)
+                    : item.media_type === "tv" 
+                    ? formatarData(item.first_air_date) 
+                    : ""
+              }
             </p>
           </Card>
       ))}

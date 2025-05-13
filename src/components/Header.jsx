@@ -42,6 +42,7 @@ function Header() {
       <StyledLink to="/" end>Início</StyledLink>
       <StyledLink to="/movie">Filmes</StyledLink>
       <StyledLink to="/tv">Séries</StyledLink>
+      <StyledLink to="/people">Pessoas</StyledLink>
     </Nav>
   );
 }
