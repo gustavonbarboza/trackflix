@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import homeBanner from "../../assets/images/posters/banner.jpg";
 
 export const Container = styled.div`
   padding: 40px;
@@ -17,3 +18,12 @@ export const SearchButton = styled.input`
   cursor: pointer;
   transition: none;
   `;
+
+export const Banner = styled.div`
+  height: 300px;
+  background-image: url(${homeBanner});
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 30px;
+`

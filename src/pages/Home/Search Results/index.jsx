@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../../services/api";
 import { Container, Title, Grid, Card} from "./styles";
+import semImagem from "../../../assets/images/sem-imagem.png"
 
 function Search() {
   const { query } = useParams();
@@ -27,10 +28,23 @@ function Search() {
       {resultados.map((item) => (
           <Card> 
             <img
-              src={`https://image.tmdb.org/t/p/w300${item.poster_path || item.profile_path}`}
+              src={
+                item.poster_path || item.profile_path
+                  ? `https://image.tmdb.org/t/p/w300${item.poster_path || item.profile_path}`
+                  : semImagem
+              }
               alt={item.title || item.name}
             />
             <h3>{item.title || item.name}</h3>
+            <p>
+              {item.media_type === "movie" 
+                ? "Filme"
+                : item.media_type === "tv"
+                ? "Série"
+                : item.media_type === "person"
+                ? "Pessoa"
+              : "" }
+            </p>
           </Card>
       ))}
       </Grid>

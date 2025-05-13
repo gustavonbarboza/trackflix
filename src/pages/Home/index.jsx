@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, SearchButton } from "./styles"
+import { Container, SearchButton, Banner } from "./styles"
 
 function Home() {
   const [busca, setBusca] = useState("");
@@ -16,14 +16,15 @@ function Home() {
 
   return (
     <Container>
-      <form onSubmit={handleSubmit}>
-        <SearchButton
-          type="text"
-          placeholder="Buscar filmes, séries ou pessoas"
-          value={busca}
-          onChange={(e) => setBusca(e.target.value)}
-        />
-      </form>
+      <Banner />
+        <form onSubmit={handleSubmit}>
+          <SearchButton
+            type="text"
+            placeholder="Buscar filmes, séries ou pessoas"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+          />
+        </form>
     </Container>
   );
 }
