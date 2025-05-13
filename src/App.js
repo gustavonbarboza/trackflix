@@ -5,6 +5,7 @@ import Movie from "./pages/Movies";
 import SerieDetails from "./pages/SerieDetails";
 import Serie from "./pages/Series";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import GlobalStyle from "./styles/GlobalStyles";
 import NotFound from "./pages/NotFound";
 import Search from "./pages/Home/Search Results";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/busca/:query" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+      <Footer />
     </Router>
   );
 
