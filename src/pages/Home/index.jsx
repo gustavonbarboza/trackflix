@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container } from "./styles"
+import { Container, SearchButton } from "./styles"
 
 function Home() {
   const [busca, setBusca] = useState("");
@@ -17,7 +17,7 @@ function Home() {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
-        <input
+        <SearchButton
           type="text"
           placeholder="Buscar filmes, séries ou pessoas"
           value={busca}

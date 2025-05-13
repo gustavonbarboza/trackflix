@@ -19,7 +19,6 @@ const StyledLink = styled(NavLink)`
   }
 
   &.active::after {
-    content: "";
     position: absolute;
     height: 2px;
     width: 100%;

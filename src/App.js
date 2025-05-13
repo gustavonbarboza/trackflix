@@ -7,7 +7,7 @@ import Serie from "./pages/Series";
 import Header from "./components/Header";
 import GlobalStyle from "./styles/GlobalStyles";
 import NotFound from "./pages/NotFound";
-import Search from "./pages/Home/Search";
+import Search from "./pages/Home/Search Results";
 
 function App() {
   return (
