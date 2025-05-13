@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import SerieDetails from "./pages/SerieDetails";
-import Favorites from "./pages/Favorites";
 import Header from "./components/Header";
 import GlobalStyle from "./styles/GlobalStyles";
 import NotFound from "./pages/NotFound";
+import Search from "./pages/Home/Search";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/tv/:id" element={<SerieDetails />} />
-          <Route path="/favoritos" element={<Favorites />} />
+          <Route path="/busca/:query" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
     </Router>

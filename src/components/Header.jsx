@@ -18,7 +18,6 @@ function Header() {
   return (
     <Nav>
       <StyledLink to="/">Início</StyledLink>
-      <StyledLink to="/favoritos">Favoritos</StyledLink>
     </Nav>
   );
 }
