@@ -7,7 +7,9 @@ import Movie from "./pages/Movies";
 import SerieDetails from "./pages/PageDetails/SerieDetails";
 import Serie from "./pages/Series";
 
+import PeopleDetails from "./pages/PageDetails/PeopleDetails";
 import People from "./pages/People";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -29,6 +31,7 @@ function App() {
           <Route path="/tv/:id" element={<SerieDetails />} />
           <Route path="/tv" element={<Serie />} />
 
+          <Route path="/person/:id" element={<PeopleDetails />} />
           <Route path="/person" element={<People />} />
 
           <Route path="/busca/:query" element={<Search />} />
