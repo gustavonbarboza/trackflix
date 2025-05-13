@@ -2,7 +2,7 @@ import { Card, Poster, Title } from "./styles";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function MovieCard({ filme, tipo = "movie" }) {
+function CardSections({ filme, tipo = "movie" }) {
   return (
     <Link to={`/${tipo}/${filme.id}`} style={{ textDecoration: "none" }}>
       <Card>
@@ -18,4 +18,4 @@ function MovieCard({ filme, tipo = "movie" }) {
   );
 }
 
-export default MovieCard;
+export default CardSections;
