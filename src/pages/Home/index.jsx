@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, SearchButton, Banner, } from "./styles"
+import { Container, SearchButton, Banner, BannerContainer } from "./styles"
 import TrendingSection from "../../components/TrendingSection"
 
 function Home() {
@@ -17,7 +17,6 @@ function Home() {
 
   return (
     <Container>
-      <Banner />
       <form onSubmit={handleSubmit}>
         <SearchButton
           type="text"
@@ -25,7 +24,13 @@ function Home() {
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
         />
-        </form>
+      </form>
+      <Banner>
+        <BannerContainer>
+          <h1>Bem-vindo(a)</h1>
+          <p>Descubra filmes, séries e muito mais</p>
+        </BannerContainer>
+      </Banner>
       <TrendingSection />
     </Container>
   );

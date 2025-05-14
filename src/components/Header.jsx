@@ -1,12 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../assets/images/logos/Logo trackflix.svg";
 
 const Nav = styled.nav`
   background-color: #121212;
-  padding: 10px 5%;
+  padding: 10px 150px;
   display: flex;
   align-items: center;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const LinksWrapper = styled.div`
+  display: flex;
   gap: 2rem;
 `;
 
@@ -38,11 +49,17 @@ const ImgLogo = styled.img`
 function Header() {
   return (
     <Nav>
-      <ImgLogo src={Logo} alt="Logo" />
-      <StyledLink to="/" end>Início</StyledLink>
-      <StyledLink to="/movie">Filmes</StyledLink>
-      <StyledLink to="/tv">Séries</StyledLink>
-      <StyledLink to="/person">Pessoas</StyledLink>
+      <NavContainer>
+        <Link to="/">
+          <ImgLogo src={Logo} alt="Logo" />
+        </Link> 
+        <LinksWrapper>
+          <StyledLink to="/" end>Início</StyledLink>
+          <StyledLink to="/movie">Filmes</StyledLink>
+          <StyledLink to="/tv">Séries</StyledLink>
+          <StyledLink to="/person">Pessoas</StyledLink>
+        </LinksWrapper>
+      </NavContainer>
     </Nav>
   );
 }
