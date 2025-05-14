@@ -1,12 +1,16 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../../services/api";
-import { Container } from "./styles";
+import { Container, Grid } from "./styles";
+import { formatarData } from "../../../components/utils/formatDate";
+import { useCredits } from "../../../hooks/useCredits";
+import Card from "../../../components/Card";
 
 function DetailsPeople() {
   const { id } = useParams();
   const [pessoas, setPessoas] = useState(null);
   const navigate = useNavigate();
+  const { credits } = useCredits(id)
   
   useEffect(() => {
     async function carregarDetalhes() {
@@ -14,7 +18,7 @@ function DetailsPeople() {
         const resposta = await api.get(`/person/${id}`);
         setPessoas(resposta.data);
       } catch (erro) {
-        console.error("Erro ao buscar série: ", erro);
+        console.error("Erro ao buscar pessoa: ", erro);
         navigate("/notfound");
       }
     }
@@ -28,12 +32,17 @@ function DetailsPeople() {
     <Container>
       <h1>{pessoas.name}</h1>
       <img 
-        src={`https://image.tmdb.org/t/p/w500${pessoas.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w500${pessoas.profile_path}`}
         alt={pessoas.name}
       />
-      <p><strong>Sinopse:</strong> {pessoas.overview}</p>
-      <p><strong>Nota:</strong> {pessoas.vote_average}</p>
-      <p><strong>Data de lançamento:</strong> {pessoas.first_air_date}</p>
+      <p><strong>Biografia:</strong> {pessoas.biography}</p>
+      <p><strong>Data de Nascimento:</strong> {formatarData(pessoas.birthday)}</p>
+      <Grid>
+          <h3>Conhecido(a) por</h3>
+          {credits.map((item) => (
+            <Card key={item.id} filme={item} tipo={item.media_type}/>
+          ))}
+        </Grid>
     </Container>
   ); 
 }

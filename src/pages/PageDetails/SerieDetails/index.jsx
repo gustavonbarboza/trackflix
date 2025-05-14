@@ -1,12 +1,16 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../../services/api";
-import { Container } from "./styles";
+import { Container, Grid } from "./styles";
+import { formatarData } from "../../../components/utils/formatDate";
+import Card from "../../../components/Card";
+import { useCast } from "../../../hooks/useCast";
 
 function DetailsSerie() {
   const { id } = useParams();
   const [serie, setSeries] = useState(null);
   const navigate = useNavigate();
+  const { cast } = useCast(id, "tv");
   
   useEffect(() => {
     async function carregarDetalhes() {
@@ -33,7 +37,13 @@ function DetailsSerie() {
       />
       <p><strong>Sinopse:</strong> {serie.overview}</p>
       <p><strong>Nota:</strong> {serie.vote_average}</p>
-      <p><strong>Data de lançamento:</strong> {serie.first_air_date}</p>
+      <p><strong>Data de lançamento:</strong> {formatarData(serie.first_air_date)}</p>
+      <Grid>
+          <h3>Elenco Principal</h3>
+          {cast.map((actor) => (
+            <Card key={actor.id} filme={actor} tipo="person"/>
+          ))}
+        </Grid>
     </Container>
   ); 
 }
