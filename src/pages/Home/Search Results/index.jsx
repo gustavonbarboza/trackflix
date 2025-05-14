@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../../services/api";
-import { Container, Title, Grid, Card} from "./styles";
-import semImagem from "../../../assets/images/sem-imagem.png"
-import { formatarData } from "../../../components/utils/formatDate";
+import { Container, Title, Grid } from "./styles";
+import Card from "../../../components/Card";
 
 function Search() {
   const { query } = useParams();
@@ -26,35 +25,9 @@ function Search() {
     <Container>
       <Title>Resultados para: "{query}"</Title>
       <Grid>
-      {resultados.map((item) => (
-          <Card> 
-            <img
-              src={
-                item.poster_path || item.profile_path
-                  ? `https://image.tmdb.org/t/p/w300${item.poster_path || item.profile_path}`
-                  : semImagem
-              }
-              alt={item.title || item.name}
-            />
-            <h3>{item.title || item.name}</h3>
-            <p>
-              {item.media_type === "movie" 
-                ? "Filme"
-                : item.media_type === "tv"
-                ? "Série"
-                : item.media_type === "person"
-                ? "Pessoa"
-                : "" 
-              } - {
-                    item.media_type === "movie" 
-                    ? formatarData(item.release_date)
-                    : item.media_type === "tv" 
-                    ? formatarData(item.first_air_date) 
-                    : ""
-              }
-            </p>
-          </Card>
-      ))}
+        {resultados.map((item) => (
+            <Card key={item.id} filme={item} tipo={item.media_type} />
+        ))}
       </Grid>
     </Container>
   );
