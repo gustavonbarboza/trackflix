@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Card = styled.div`
   width: 200px;
   margin: 10px;
-  background-color: #1c1c1c;
+  height: 400px;
+  background-color: #272727;
   border-radius: 10px;
   overflow: hidden;
   color: white;
@@ -19,4 +20,13 @@ export const Poster = styled.img`
 export const Title = styled.h3`
   font-size: 1rem;
   padding: 10px;
+  margin-left: 5px;
+`;
+
+export const SubTitle = styled.p`
+  color: #a8a8a8;
+  font-size: 14px;
+  padding: 0 10px 10px 10px;
+  margin-top: -8px;
+  margin-left: 5px;
 `;

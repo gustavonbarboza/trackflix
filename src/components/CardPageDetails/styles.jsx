@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 138px;
-  min-height: 280px;
   margin: 10px;
+  min-height: 280px;
   background-color: #3a3a3a;
   border-radius: 10px;
   overflow: hidden;
