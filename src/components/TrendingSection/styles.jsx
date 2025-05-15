@@ -29,14 +29,14 @@ export const Button = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 10px;
-  background-color: ${({ active }) => (active ? '#e50914' : '#fff')};
-  color: ${({ active }) => (active ? '#fff' : '#000')};
+  background-color: ${({ $active }) => ($active ? '#e50914' : '#A9A9A9')};
+  color: ${({ $active }) => ($active ? '#fff' : '#000')};
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${({ active }) => (active ? '#b00610' : '#f0f0f0')};
+    background-color: ${({ $active }) => ($active ? '#b00610' : '#f0f0f0')};
   }
 `;
 

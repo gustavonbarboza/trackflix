@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 40px;
+padding: 14px 150px 14px 150px;
   color: white;
 `;
 
@@ -12,11 +12,11 @@ export const Title = styled.h2 `
 export const Grid = styled.div `
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
+  gap: 50px;
 `;
 
 export const Card = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 
   img {

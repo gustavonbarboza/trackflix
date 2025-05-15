@@ -25,8 +25,8 @@ function TrendingSection() {
       <Header>
         <Title>Tendência</Title>
         <ButtonGroup>
-          <Button onClick={() => setTimeWindow('day')} active={timeWindow === 'day'}>Hoje</Button>
-          <Button onClick={() => setTimeWindow('week')} active={timeWindow === 'week'}>Semana</Button>
+          <Button onClick={() => setTimeWindow('day')} $active={timeWindow === 'day'}>Hoje</Button>
+          <Button onClick={() => setTimeWindow('week')} $active={timeWindow === 'week'}>Semana</Button>
         </ButtonGroup>
       </Header>
 

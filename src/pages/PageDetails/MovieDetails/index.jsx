@@ -5,6 +5,7 @@ import { Container, Grid } from "./styles";
 import { formatarData } from "../../../components/utils/formatDate";
 import { useCast } from "../../../hooks/useCast";
 import Card from "../../../components/Card";
+import semImagem from "../../../assets/images/sem-imagem.png"
 
 function DetailsMovie() {
   const { id } = useParams();
@@ -33,7 +34,7 @@ function DetailsMovie() {
       <Container>
         <h1>{filme.title}</h1>
         <img 
-          src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
+          src={filme.poster_path ? `https://image.tmdb.org/t/p/w500${filme.poster_path}` : semImagem}
           alt={filme.title}
         />
         <p><strong>Sinopse:</strong> {filme.overview}</p>

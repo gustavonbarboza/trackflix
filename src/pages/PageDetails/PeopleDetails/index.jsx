@@ -5,6 +5,7 @@ import { Container, Grid } from "./styles";
 import { formatarData } from "../../../components/utils/formatDate";
 import { useCredits } from "../../../hooks/useCredits";
 import Card from "../../../components/Card";
+import semImagem from "../../../assets/images/sem-imagem.png"
 
 function DetailsPeople() {
   const { id } = useParams();
@@ -32,7 +33,7 @@ function DetailsPeople() {
     <Container>
       <h1>{pessoas.name}</h1>
       <img 
-        src={`https://image.tmdb.org/t/p/w500${pessoas.profile_path}`}
+        src={pessoas.profile_path ? `https://image.tmdb.org/t/p/w500${pessoas.profile_path}` : semImagem}
         alt={pessoas.name}
       />
       <p><strong>Biografia:</strong> {pessoas.biography}</p>

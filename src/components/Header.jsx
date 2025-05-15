@@ -54,7 +54,6 @@ function Header() {
           <ImgLogo src={Logo} alt="Logo" />
         </Link> 
         <LinksWrapper>
-          <StyledLink to="/" end>Início</StyledLink>
           <StyledLink to="/movie">Filmes</StyledLink>
           <StyledLink to="/tv">Séries</StyledLink>
           <StyledLink to="/person">Pessoas</StyledLink>

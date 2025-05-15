@@ -5,6 +5,7 @@ import { Container, Grid } from "./styles";
 import { formatarData } from "../../../components/utils/formatDate";
 import Card from "../../../components/Card";
 import { useCast } from "../../../hooks/useCast";
+import semImagem from "../../../assets/images/sem-imagem.png"
 
 function DetailsSerie() {
   const { id } = useParams();
@@ -32,7 +33,7 @@ function DetailsSerie() {
     <Container>
       <h1>{serie.name}</h1>
       <img 
-        src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}
+        src={serie.poster_path ? `https://image.tmdb.org/t/p/w500${serie.poster_path}` : semImagem}
         alt={serie.name}
       />
       <p><strong>Sinopse:</strong> {serie.overview}</p>
