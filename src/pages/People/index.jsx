@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import PeopleCard from "../../components/Card";
+import PeopleCard from "../../components/DefaultCard";
 import { Container, Title, Grid } from "./styles";
 
 function People() {

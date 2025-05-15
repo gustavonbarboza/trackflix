@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import MovieCard from "../../components/Card";
+import MovieCard from "../../components/DefaultCard";
 import { Container, Title, Grid } from "../Movies/styles"
 
 function Movies() {

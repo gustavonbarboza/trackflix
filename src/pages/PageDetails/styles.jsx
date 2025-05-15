@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: white;
-
 `;
 
 export const DetailsMovies = styled.div`
@@ -12,7 +11,7 @@ export const DetailsMovies = styled.div`
   padding: 14px 150px 14px 150px;
   position: relative;
 
-  background-image: url(${props => props.bgImage});
+  background-image: url(${props => props.$bgImage});
   background-size: cover;
   background-position: center;
   
@@ -63,7 +62,13 @@ export const SubInfo = styled.div`
   margin-bottom: 20px;
 `;
 
-export const Sinopse = styled.p`
+export const Sinopse = styled.div`
+  margin-top: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+`
+
+export const ReleaseDate = styled.div`
   margin-top: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -72,7 +77,6 @@ export const Sinopse = styled.p`
 export const Highlight = styled.h3`
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
 `;
 
 export const Score = styled.span`
@@ -87,8 +91,6 @@ export const Score = styled.span`
 
 export const Grid = styled.div`
   background-color: #2e2e2e;
-  display: flex;
-  flex-wrap: wrap;
   padding: 14px 150px 14px 150px;
 `;
 

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../../services/api";
 import { Container, Title, Grid } from "./styles";
-import Card from "../../../components/Card";
+import Card from "../../../components/DefaultCard";
 
 function Search() {
   const { query } = useParams();

@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import api from "../../../services/api";
-import { Container, DetailsMovies, Poster, Content, TitleContainer, SubTitle, Title, SubInfo, Sinopse, Highlight, Score, Grid, ScrollContainer } from "./styles";
-import Card from "../../../components/Card";
-import { formatarData } from "../../../components/utils/formatDate";
-import { useCast } from "../../../hooks/useCast";
-import semImagem from "../../../assets/images/sem-imagem.png"
+import api from "../../services/api";
+import { Container, DetailsMovies, Poster, Content, TitleContainer, SubTitle, Title, SubInfo, Sinopse, ReleaseDate, Highlight, Score, Grid, ScrollContainer } from "./styles";
+import Card from "../../components/CardPageDetails";
+import { formatarData } from "../../components/utils/formatDate";
+import { useCast } from "../../hooks/useCast";
+import semImagem from "../../assets/images/sem-imagem.png"
 
 function DetailsMovie() {
   const { id } = useParams();
@@ -30,11 +30,10 @@ function DetailsMovie() {
   if (!filme) return <p>Carregando...</p>;
 
   return (
-    <>
       <Container>
 
         <DetailsMovies
-          bgImage={filme.poster_path ? `https://image.tmdb.org/t/p/original${filme.poster_path}` : semImagem}
+          $bgImage={filme.poster_path ? `https://image.tmdb.org/t/p/original${filme.poster_path}` : semImagem}
         >
           <Poster 
               src={filme.poster_path ? `https://image.tmdb.org/t/p/w300${filme.poster_path}` : semImagem}
@@ -42,6 +41,7 @@ function DetailsMovie() {
             />
 
           <Content>
+
             <TitleContainer>
               <Title>{filme.title}</Title>
               <SubTitle>({filme.release_date?.substring(0, 4)})</SubTitle>
@@ -56,21 +56,25 @@ function DetailsMovie() {
               {filme.overview}
             </Sinopse>
 
-            <p><Highlight>Data de lançamento</Highlight> {formatarData(filme.release_date)}</p>
+            <ReleaseDate>
+              <Highlight>Data de lançamento</Highlight>
+              {formatarData(filme.release_date)}
+            </ReleaseDate>
+
           </Content>
+          
         </DetailsMovies>
 
         <Grid>
           <h3>Elenco Principal</h3>
           <ScrollContainer>
               {cast.map((actor) => (
-                <Card key={actor.id} filme={actor} tipo="person"/>
+                <Card key={actor.id} person={actor} />
               ))}
           </ScrollContainer>   
         </Grid>
 
       </Container>
-    </>
   ); 
 }
 
