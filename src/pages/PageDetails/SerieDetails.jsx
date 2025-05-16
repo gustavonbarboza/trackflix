@@ -4,7 +4,7 @@ import api from "../../services/api";
 import { Container, DetailsMovies, Poster, Content, TitleContainer, SubTitle, Title, SubInfo, Sinopse, ReleaseDate, Highlight, Score, Grid, ScrollContainer } from "./styles";
 import { formatarData } from "../../utils/formatDate";
 import PersonCard from "../../components/CardPageDetails";
-import { useCast } from "../../hooks/useCast";
+import { useCast } from "../../hooks/carregarElencoFilmes";
 import semImagem from "../../assets/images/sem-imagem.png"
 
 function DetailsSerie() {

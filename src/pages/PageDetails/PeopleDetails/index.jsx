@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import api from "../../../services/api";
 import { Container, Grid } from "./styles";
 import { formatarData } from "../../../utils/formatDate";
-import { useCredits } from "../../../hooks/useCredits";
+import { useCredits } from "../../../hooks/carregarFilmesAtor";
 import Card from "../../../components/DefaultCard";
 import semImagem from "../../../assets/images/sem-imagem.png"
 
