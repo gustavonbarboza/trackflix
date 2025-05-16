@@ -35,7 +35,7 @@ export const Banner = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 0, 0, 0.441);
+    background: rgba(215, 24, 24, 0.69);
   }
 `
 
