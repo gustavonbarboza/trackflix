@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Container, Title, ScrollContainer, Button, ButtonGroup, Header } from "./styles"
-import Card from "../DefaultCard"
+import Card from "../CardDefault"
 
 function TrendingSection() {
   const [tendencias, setTendencias] = useState([]);
