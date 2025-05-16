@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import homeBanner from "../../assets/images/posters/banner.jpg";
 
 export const Container = styled.div`
   color: white;
@@ -19,8 +18,8 @@ export const SearchButton = styled.input`
 export const Banner = styled.div`
   position: relative;
   width: 100vw;
-  height: 300px;
-  background-image: url(${homeBanner});
+  height: 400px;
+  background-image: url(${(props) => props.$image});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,8 +46,10 @@ export const BannerContainer = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
   margin-left: 150px;
-  margin-top: 5%;
   
   h1 {
     font-size: 48px;

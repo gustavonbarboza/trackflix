@@ -8,7 +8,7 @@ export const DetailsMovies = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 14px 150px 14px 150px;
+  padding: 40px 150px 40px 150px;
   position: relative;
 
   background-image: url(${props => props.$bgImage});
