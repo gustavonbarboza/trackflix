@@ -8,7 +8,7 @@ function Series() {
 
   useEffect(() => {
     async function carregarSeries() {
-      const resposta = await api.get("./tv/popular");
+      const resposta = await api.get("./tv/top_rated");
       setSeries(resposta.data.results);
     } 
 

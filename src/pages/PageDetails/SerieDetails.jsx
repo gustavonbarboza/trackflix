@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Container, DetailsMovies, Poster, Content, TitleContainer, SubTitle, Title, SubInfo, Sinopse, ReleaseDate, Highlight, Score, Grid, ScrollContainer } from "./styles";
-import { formatarData } from "../../components/utils/formatDate";
+import { formatarData } from "../../utils/formatDate";
 import PersonCard from "../../components/CardPageDetails";
 import { useCast } from "../../hooks/useCast";
 import semImagem from "../../assets/images/sem-imagem.png"

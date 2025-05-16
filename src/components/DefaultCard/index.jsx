@@ -2,7 +2,7 @@ import { Card, Poster, Title, SubTitle } from "./styles";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import semImagem from "../.././assets/images/sem-imagem.png"
-import { formatarData } from "../../components/utils/formatDate";
+import { formatarData } from "../../utils/formatDate";
 
 function CardSections({ filme, tipo = "movie" }) {
   return (
