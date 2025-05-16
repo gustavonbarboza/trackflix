@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 20px;
+  padding: 14px 150px 14px 150px;
   color: white;
 `;
 
@@ -10,6 +10,18 @@ export const Grid = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  color: white;
+  border: none; 
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 2rem;
 `;
 
 export const Title = styled.h1`
