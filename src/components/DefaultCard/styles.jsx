@@ -21,6 +21,7 @@ export const Title = styled.h3`
   font-size: 1rem;
   padding: 10px;
   margin-left: 5px;
+  margin-right: 5px;
 `;
 
 export const SubTitle = styled.p`
@@ -29,4 +30,5 @@ export const SubTitle = styled.p`
   padding: 0 10px 10px 10px;
   margin-top: -8px;
   margin-left: 5px;
+  margin-right: 15px;
 `;
