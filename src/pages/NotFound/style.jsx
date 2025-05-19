@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #61dafb;
+  color: #e50914;
   text-decoration: none;
   font-size: 18px;
   margin-top: 20px;
