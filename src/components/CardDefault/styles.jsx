@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div`
   width: 200px;
   margin: 10px;
-  height: 400px;
+  height: 100%;
   background-color: #272727;
   border-radius: 10px;
   overflow: hidden;
@@ -11,8 +11,7 @@ export const Card = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 768px) {
-    width: 140px;
-    height: 270px;
+    width: 145px;
   }
 `;
 
@@ -22,7 +21,7 @@ export const Poster = styled.img`
   object-fit: cover;
 
   @media (max-width: 768px) {
-    height: 140px;
+    height: auto;
   }
 `;
 

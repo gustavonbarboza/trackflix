@@ -5,7 +5,7 @@ export const Container = styled.div`
   color: white;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 `;
 
@@ -17,5 +17,10 @@ export const Grid = styled.div `
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px 0px;
   padding: 20px;
+  
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 `;
