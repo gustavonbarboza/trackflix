@@ -68,7 +68,7 @@ function DetailsPeople() {
 
 
           <Grid>
-            <h3>Elenco Principal</h3>
+            <h3>Conhecido(a) por</h3>
             <ScrollContainer>
               {credits.map((item) => (
                 <Card key={item.id} filme={item} tipo={item.media_type}/>

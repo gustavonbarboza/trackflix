@@ -7,6 +7,10 @@ const Nav = styled.nav`
   padding: 10px 150px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const NavContainer = styled.div`
@@ -14,11 +18,20 @@ const NavContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const LinksWrapper = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 const StyledLink = styled(NavLink)`

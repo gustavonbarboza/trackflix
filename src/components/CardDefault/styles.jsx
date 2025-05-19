@@ -9,12 +9,21 @@ export const Card = styled.div`
   overflow: hidden;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    width: 140px;
+    height: 270px;
+  }
 `;
 
 export const Poster = styled.img`
   width: 100%;
   height: 300px;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    height: 140px;
+  }
 `;
 
 export const Title = styled.h3`

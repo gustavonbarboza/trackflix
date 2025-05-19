@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import PeopleCard from "../../components/CardDefault";
-import { Container, Title, Grid, Button } from "./styles";
+import { Container, Title, Grid, Button } from "../Movies/styles";
 
 function People() {
   const [pessoas, setPessoas] = useState([]);

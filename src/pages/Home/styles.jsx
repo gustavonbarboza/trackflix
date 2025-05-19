@@ -12,21 +12,18 @@ export const SearchButton = styled.input`
   font-size: 16px;
   font-weight: bold;
   border: none;
-  transition: none;
+
+  @media (max-width: 768px) {
+    padding: 14px 20px 14px 20px;
+  }
   `;
 
 export const Banner = styled.div`
   position: relative;
-  width: 100vw;
   height: 400px;
   background-image: url(${(props) => props.$image});
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  margin-left: calc(-50vw + 50%);
-  margin-bottom: 30px;
-  border-radius: 12px;
-  overflow: hidden;
 
   &::after {
     content: "";
@@ -37,19 +34,26 @@ export const Banner = styled.div`
     height: 100%;
     background: rgba(215, 24, 24, 0.69);
   }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `
 
 
 export const BannerContainer = styled.div`
-  position: relative;
-  z-index: 2;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   height: 100%;
-  margin-left: 150px;
+  z-index: 2;
+  padding-left: 150px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding-left: 8%;
+  }
   
   h1 {
     font-size: 48px;

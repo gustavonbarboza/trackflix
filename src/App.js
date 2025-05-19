@@ -15,7 +15,7 @@ import Footer from "./components/Footer";
 
 import GlobalStyle from "./styles/GlobalStyles";
 import NotFound from "./pages/NotFound";
-import Search from "./pages/Home/Search Results";
+import Search from "./pages/Search Results";
 
 function App() {
   return (

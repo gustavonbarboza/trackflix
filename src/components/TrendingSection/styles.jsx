@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.section`
   padding: 10px;
   margin: 0px 150px 0px 150px;
+
+  @media (max-width: 768px) {
+    margin: 0 20px;
+  }
 `;
 
 export const Header = styled.div`

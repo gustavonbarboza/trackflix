@@ -64,7 +64,7 @@ function DetailsSerie() {
     </DetailsMovies>
 
     <Grid>
-      <h3>Elenco Principal</h3>
+      <h3>Elenco da série</h3>
       <ScrollContainer>
           {cast.map((actor) => (
             <PersonCard key={actor.id} person={actor} />

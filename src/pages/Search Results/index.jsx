@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import api from "../../../services/api";
+import api from "../../services/api";
 import { Container, Title, Grid } from "./styles";
-import Card from "../../../components/CardDefault";
+import Card from "../../components/CardDefault";
 
 function Search() {
   const { query } = useParams();

@@ -19,18 +19,32 @@ export const DetailsMovies = styled.div`
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(28, 28, 28,0.95); // ajuste a opacidade como preferir
+    background: rgba(28, 28, 28,0.95);
     z-index: 0;
   }
 
   > * {
     position: relative;
   }
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
 `;
 
 export const Poster = styled.img`
   width: 300px;
   border-radius: 8px;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
+  }
 `;
 
 export const Content = styled.div`
@@ -39,39 +53,68 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
   font-size: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const SubTitle = styled.h2`
   font-size: 30px;
   font-weight: 300;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 export const SubInfo = styled.div`
   font-size: 14px;
   color: #aaa;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Sinopse = styled.div`
   margin-top: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    text-align: justify;
+  }
 `
 
 export const ReleaseDate = styled.div`
   margin-top: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    text-align: justify;
+  }
 `
 
 export const Highlight = styled.h3`
@@ -91,7 +134,11 @@ export const Score = styled.span`
 
 export const Grid = styled.div`
   background-color: #2e2e2e;
+  
   padding: 14px 150px 14px 150px;
+  @media (max-width: 768px) {
+    padding: 14px 20px;
+  }
 `;
 
 export const ScrollContainer = styled.div`
