@@ -8,7 +8,7 @@ import SerieDetails from "./pages/PageDetails/SerieDetails";
 import Serie from "./pages/Series";
 
 import PeopleDetails from "./pages/PageDetails/PeopleDetails";
-import People from "./pages/People";
+import People from "./pages/Person";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
