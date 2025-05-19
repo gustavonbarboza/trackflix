@@ -48,6 +48,7 @@ export const ScrollContainer = styled.div`
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  overflow-y: hidden;
 
   &::-webkit-scrollbar {
     height: 8px;
