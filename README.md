@@ -71,7 +71,7 @@ npm install
 ```
 
 ```
-REACT_APP_TMDB_API_KEY=sua_chave_aqui
+(./services/api.js) -> const apiKey = "sua_chave_aqui"
 ```
 
 ```bash
